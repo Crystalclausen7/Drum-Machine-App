@@ -1,0 +1,29 @@
+
+@mixin flex {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#drum-machine {
+	box-sizing: border-box;
+	@include flex;
+	margin: 7px;
+	flex-wrap: wrap;
+	& .pads {
+		flex: 0 0 31%;
+	}
+}
+@media (max-width: 650px) {
+	
+	#drum-machine {
+		& .pads {
+			height: 100px;
+			width: 100px;
+		}
+	}
+
+}
+
+
+

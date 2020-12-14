@@ -1,0 +1,32 @@
+
+$text-color: #fef;
+
+@mixin flex($jc, $ai) {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-ms-align-items: $ai;
+	align-items: $ai;
+	justify-content: $jc;
+}
+
+
+.drum-pad {
+	@include flex(center, center);
+	min-width: 100px;
+	min-height: 100px;
+	color: $text-color;
+	font-size: 2em;
+	margin: 4px;
+	text-align: center;
+	border-radius: 10px;
+	& .text {
+		text-align: center;
+	}
+
+	&:active {
+		transform: scale(0.8);
+	}
+}
