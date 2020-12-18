@@ -15,7 +15,9 @@ To install necessary dependencies, run the following command:
 npm i
 ```
 
+```
 npm start
+```
 
 ## Usage
 
