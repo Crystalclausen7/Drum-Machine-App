@@ -1,4 +1,4 @@
-# Project 3 Drum Machine
+# Drum Machine
 
 ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
 

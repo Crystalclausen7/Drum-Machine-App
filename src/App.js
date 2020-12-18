@@ -20,8 +20,8 @@ function App(props) {
 			<Route exact path="/drummachine">
 				<Main></Main>
 			</Route>
-			<Route exact path="/registerpage">
-				<RegisterPage></RegisterPage>
+			<Route exact path="/loginpage">
+				<LoginPage></LoginPage>
 			</Route>
 		</Switch>
 	);

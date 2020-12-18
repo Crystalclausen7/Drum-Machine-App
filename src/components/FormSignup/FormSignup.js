@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom"
 import useForm from '../../utils/js/useForm';
 import validate from '../../utils/js/validateInfo';
 import '../../pages/Form.css'
@@ -71,7 +72,7 @@ const FormSignup = ( {submitForm}) => {
                     {errors.password2 && <p>{errors.password2}</p>}
                 </div>
                 <button className="form-input-btn" type="submit">Sign up</button>
-                <span className="form-input-login">Already have an account? Login <a href="./public/index.html">here</a></span>
+                <span className="form-input-login">Already have an account? Login <Link to="/loginpage">here</Link></span>
 
             </form>
         </div>
