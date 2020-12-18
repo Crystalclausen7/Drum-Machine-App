@@ -31,6 +31,4 @@ This project is licensed under the MIT license.
 
 ## Contributing
 
-https://github.com/cmojica1231/Drum-Machine-App
-
- 
+https://github.com/ccastillo356/Drum-Machine-App
