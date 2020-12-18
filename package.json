@@ -15,7 +15,7 @@
     "redux": "^4.0.5"
   },
   "scripts": {
-    "heroku-postbuild": "npm install && yarn install && npm run build",
+    "heroku-postbuild": "npm install && npm run build",
     "server": "node server.js",
     "start": "react-scripts start",
     "build": "react-scripts build",
