@@ -1,5 +1,4 @@
 import React from "react";
-// import { BrowserRouter as Route, Switch } from "react-router-dom"
 import DrumMachine from "./components/drum-machine";
 import BoxDisplayContainer from "./components/box-display";
 import VolumeContainer from './components/volume';
@@ -10,12 +9,13 @@ import { change_power } from "./redux/actions/power";
 import "./App.scss";
 import { Route, Switch } from "react-router-dom";
 import RegisterPage from "./pages/RegisterPage";
+import Form from "./pages/Form";
 
 function App(props) {
 	return (
 		<Switch>
 			<Route exact path="/">
-				<LoginPage></LoginPage>
+				<Form></Form>
 			</Route>
 			<Route exact path="/drummachine">
 				<Main></Main>
@@ -26,19 +26,5 @@ function App(props) {
 		</Switch>
 	);
 }
-
-// const mapStateToProps = (state) => {
-// 	return {
-// 		power: state.power,
-// 	};
-// };
-
-// const mapDispatchToProps = (dispatch) => {
-// 	return {
-// 		change_power: (state) => {
-// 			dispatch(change_power(state.power));
-// 		},
-// 	};
-// };
 
 export default App;
