@@ -17,8 +17,6 @@ npm i
 
 npm start
 
-```
-
 ## Usage
 
 Run "node server.js" to start the server localhost:3000
@@ -27,7 +25,6 @@ Run "node server.js" to start the server localhost:3000
 
 Visit to see my work: https://-----.herokuapp.com/
 
-
 ## License
 
 This project is licensed under the MIT license.
@@ -35,4 +32,5 @@ This project is licensed under the MIT license.
 ## Contributing
 
 https://github.com/cmojica1231/Drum-Machine-App
-```
+
+ 
