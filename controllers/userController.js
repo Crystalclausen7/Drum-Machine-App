@@ -8,7 +8,7 @@ module.exports = {
             .catch((err) => res.status(422).json(err))
     },
     findOne: function (req, res) {
-        User.find({ user: req.params.user })
+        User.find({ username: req.params.user })
             .then((dbModel) => res.json(dbModel))
             .catch((err) => res.status(422).json(err))
     },

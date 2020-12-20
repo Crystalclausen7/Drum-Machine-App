@@ -1,33 +1,56 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import Axios from "axios";
+import React, { useState } from "react";
+import { Link, Redirect } from "react-router-dom";
 import "./style.css";
 
 function LoginPage() {
+  const [formObject, setFormObject] = useState();
+  const [isLoggedIn, setIsLoggedIn] = useState(false)
+
+  function handleChange(event) {
+    const { name, value } = event.target;
+    setFormObject({ ...formObject, [name]: value });
+  }
+
+  function handleSubmit() {
+    Axios.get(`/api/${formObject.username}`).then((res) => {
+      if (res.data[0].username === formObject.username && res.data[0].password === formObject.password) {
+        localStorage.setItem("loggedIn", "true")
+        setIsLoggedIn(true)
+      }
+    });
+  }
+
   return (
     <>
-      <div class="main">
-        <p class="sign" align="center">
+      <div className="main">
+        <p className="sign" align="center">
           Sign in
         </p>
-        <form class="form1">
+        <form className="form1">
           <input
-            class="un "
+            className="un "
+            name="username"
             type="text"
             align="center"
             placeholder="Username"
+            onChange={handleChange}
           ></input>
           <input
-            class="pass"
+            className="pass"
+            name="password"
             type="password"
             align="center"
             placeholder="Password"
+            onChange={handleChange}
           ></input>
-          <a class="submit" align="center">
+          <a className="submit" align="center" onClick={handleSubmit}>
             Sign in
           </a>
         </form>
       </div>
-      <Link to="/">Register</Link>
+      
+      {isLoggedIn ? <Redirect to="/drummachine"></Redirect> : <Link to="/">Register</Link>}
     </>
   );
 }
