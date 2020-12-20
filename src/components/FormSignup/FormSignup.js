@@ -6,6 +6,9 @@ import '../../pages/Form.css'
 
 const FormSignup = ( {submitForm}) => {
     const { handleChange, values, handleSubmit, errors } = useForm (submitForm, validate);
+
+
+    
     return (
         <div className="form-content-right">
             <form className="form" onSubmit={handleSubmit}>
